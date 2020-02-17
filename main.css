@@ -1,0 +1,70 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+body {
+	background: rgb(144, 66, 185);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.clock {
+	width: 400px;
+	height: 400px;
+	background: rgb(223, 190, 255);
+	border: 20px solid rebeccapurple;
+	border-radius: 50%;
+	position: relative;
+	box-shadow: 0 10px 10px rgba(21, 2, 41, 0.356) inset,
+		0 10px 10px rgb(21, 2, 41);
+}
+
+.clock .hand {
+	background: black;
+	height: 130px;
+	width: 8px;
+	border-radius: 10px;
+	position: absolute;
+	left: 50%;
+	bottom: 50%;
+	transform-origin: bottom;
+	transform: translateX(-50%);
+}
+
+.clock .hand.hour-hand {
+	height: 100px;
+}
+.clock .hand.second-hand {
+	background: rebeccapurple;
+	width: 5px;
+}
+
+.clock .center-circle {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: rgb(0, 0, 0);
+	position: absolute;
+	left: 50%;
+	bottom: 50%;
+	transform: translate(-50%, 50%);
+}
+
+.clock .numbers {
+	width: 100%;
+	height: 100%;
+}
+
+.clock .numbers div {
+	height: 170px;
+	font-size: 25px;
+	font-weight: bold;
+	position: absolute;
+	left: 50%;
+	bottom: 50%;
+	transform-origin: bottom;
+	transform: translateX(-50%) rotate(50deg);
+}
